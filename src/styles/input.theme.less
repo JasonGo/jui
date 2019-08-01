@@ -1,0 +1,61 @@
+.input {
+  color: @inputFontColor;
+  background-color: @inputBackgroundColor;
+  border: 1px solid @inputBorderColor;
+  text-shadow: @inputTextShadow;
+  .border-radius(@inputBorderRadius);
+  .box-shadow(@inputBoxShadow);
+
+  &:focus, &.focus {
+    color: @inputFocusFontColor;
+    border-color: @inputFocusBorderColor;
+    background-color: @inputFocusBackgroundColor;
+    outline: 0;
+    .box-shadow(@inputFocusBoxShadow);
+    .transition(@inputFocusTransition);
+  }
+}
+
+.input[disabled], .input[readonly], .input.disabled, .input.readonly {
+  cursor: not-allowed;
+  background-color: @inputDisabledBackgroundColor;
+  color: @inputDisabledFontColor;
+}
+
+.input:focus:invalid, .input.invalid {
+  color: @inputInvalidFontColor;
+  border-color: @inputInvalidBorderColor;
+
+  &:focus {
+    border-color: @inputInvalidFocusBorderColor;
+    .box-shadow(@inputInvalidFocusBoxShadow);
+  }
+}
+
+
+// CHECKBOX/RADIO STYLES
+// -----------
+
+.checkbox,.radio {
+  > input+i {
+    border-color: @inputCheckboxAndRadioUncheckedBorderColor;
+  }
+
+  > input:checked+i {
+    border-color: @inputCheckboxAndRadioCheckedBackgroundColor;
+    background: @inputCheckboxAndRadioCheckedBackgroundColor;
+
+    &:before {
+      color: @inputCheckboxAndRadioCheckedFontColor;
+    }
+  }
+
+  > input:disabled+i {
+    border-color: @inputCheckboxAndRadioDisabledBackgroundColor;
+    background: @inputCheckboxAndRadioDisabledBackgroundColor;
+
+    &:before {
+      color: @inputCheckboxAndRadioDisabledFontColor;
+    }
+  }
+}

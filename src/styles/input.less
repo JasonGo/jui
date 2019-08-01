@@ -1,0 +1,219 @@
+.input {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  .box-sizing(border-box);
+  .input.normal;
+}
+
+// Textarea Setting
+textarea.input {
+   padding: 5px;
+   height: auto;
+}
+
+
+// INPUT SIZES
+// -----------
+
+.input.normal {
+  font-size: 14px;
+  padding: 4px 8px;
+  height: 28px;
+}
+
+.input.large {
+  font-size: 16px !important;
+  padding: 9px 10px !important;
+  height: 38px !important;
+}
+
+.input.small {
+  font-size: 12px !important;
+  height: 24px !important;
+}
+
+.input.mini {
+  font-size: 12px !important;
+  height: 22px !important;
+}
+
+
+// CHECKBOX/RADIO STYLES
+// -----------
+
+.checkbox,.radio {
+  position: relative;
+  display: inline-block;
+
+  > i {
+    position: absolute;
+    z-index: 0;
+    border-style: solid;
+    border-radius: 1px;
+
+    &:before {
+      position: absolute;
+    }
+  }
+
+  > input {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  > input+i {
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  > input:checked+i {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  > input:disabled {
+    opacity: 0;
+    cursor: not-allowed;
+  }
+
+  > input:disabled+i {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+.checkbox {
+  .checkbox.mini;
+}
+.radio {
+  .radio.mini;
+}
+
+.checkbox.mini,.radio.mini {
+  > i {
+    border-width: 1px;
+    width: inherit;
+    height: inherit;
+
+    &:before {
+      font-size: 10px;
+      top: 2px;
+      left: 2px;
+    }
+  }
+
+  > input {
+    width: inherit;
+    height: inherit;
+  }
+}
+.checkbox.mini {
+  width: 14px;
+  height: 14px;
+}
+.radio.mini {
+  width: 14px;
+  height: 14px;
+
+  > i {
+    border-radius: 14px;
+  }
+}
+
+.checkbox.small,.radio.small {
+  > i {
+    border-width: 2px;
+    width: inherit;
+    height: inherit;
+
+    &:before {
+      font-size: 12px;
+      top: 3px;
+      left: 3px;
+    }
+  }
+
+  > input {
+    width: inherit;
+    height: inherit;
+  }
+}
+.checkbox.small {
+  width: 18px;
+  height: 18px;
+}
+.radio.small {
+  width: 18px;
+  height: 18px;
+
+  > i {
+    border-radius: 18px;
+  }
+}
+
+.checkbox.normal,.radio.normal {
+  > i {
+    border-width: 2px;
+    width: inherit;
+    height: inherit;
+
+    &:before {
+      font-size: 15px;
+      top: 5px;
+      left: 5px;
+    }
+  }
+
+  > input {
+    width: inherit;
+    height: inherit;
+  }
+}
+.checkbox.normal {
+  width: 24px;
+  height: 24px;
+}
+.radio.normal {
+  width: 24px;
+  height: 24px;
+
+  > i {
+    border-radius: 24px;
+  }
+}
+
+.checkbox.large,.radio.large {
+  > i {
+    border-width: 2px;
+    width: inherit;
+    height: inherit;
+
+    &:before {
+      font-size: 20px;
+      top: 5px;
+      left: 5px;
+    }
+  }
+
+  > input {
+    width: inherit;
+    height: inherit;
+  }
+}
+.checkbox.large {
+  width: 30px;
+  height: 30px;
+}
+.radio.large {
+  width: 30px;
+  height: 30px;
+
+  > i {
+    border-radius: 30px;
+  }
+}
